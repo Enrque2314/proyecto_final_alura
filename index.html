@@ -1,78 +1,48 @@
 <!DOCTYPE html>
-<html lang="es"> 
+<html lang="es">
 <head>
-    <!-- DATOS Y CONFIGURACIÓN BÁSICA DE LA PÁGINA -->
-    <meta charset="UTF-8"> <!-- Define la codificación de caracteres del documento como UTF-8 -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura la vista para dispositivos móviles -->
-    <title>Proyecto Encriptador</title> <!-- Título de la página que aparece en la pestaña del navegador -->
-
-    <script src="log_proyecto.js"></script> <!-- Enlace al archivo de JavaScript que contiene la lógica del proyecto -->
-
-    <!-- ENLACE A LA HOJA DE ESTILOS CSS -->
-    <link rel="stylesheet" href="/estilos.css"> <!-- Enlace al archivo CSS para el estilo de la página -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400&display=swap" rel="stylesheet">
+    <title>Encriptador challenge</title>
 </head>
 <body>
-
-    <!-- CABECERA DE LA PÁGINA -->
     <header>
-        <!-- LOGO DE LA CABECERA -->
-        <img class="logo_header" src="./img/Logo.svg" alt="Logo Alura Latam"> <!-- Imagen del logo en la cabecera -->
+        <img class="logo" src="Imagenes/Logo.svg" alt="logo">
     </header>
-
-    <!-- CONTENIDO PRINCIPAL -->
     <main>
-        <!-- SECCIÓN 1: ÁREA PARA INGRESAR TEXTO Y BOTONES DE ACCIÓN -->
-        <section class="section1">
-            <!-- CONTENEDOR DEL CAMPO DE TEXTO -->
-            <div class="contenedor_caja_texto">
-                <!-- ÁREA DE TEXTO DONDE EL USUARIO INGRESA TEXTO PARA ENCRIPTAR O DESENCRIPTAR -->
-                <textarea placeholder="Ingreso el texto aquí" class="caja_input"></textarea> <!-- Área de texto para entrada de usuario -->
+        <section class="input-section">
+            <div class="textarea-container">
+                <textarea placeholder="Ingrese el texto aquí" class="textarea"></textarea>
             </div>
-
-            <!-- MENSAJE DE ALERTA SOBRE LAS RESTRICCIONES DEL TEXTO -->
-            <div class="alerta">
-                <!-- IMAGEN DE ALERTA -->
-                <img src="/img/alerta.svg" alt="Imagen alerta"> <!-- Imagen de alerta con mensaje sobre las restricciones -->
-                <!-- TEXTO DE ALERTA: INDICA QUE SOLO SE PUEDEN USAR LETRAS MINÚSCULAS SIN ACENTOS -->
-                <p>Solo letras minúsculas y sin acentos</p> <!-- Mensaje informativo sobre las restricciones del texto -->
+            <div class="alert-message">
+                <img src="Imagenes/alerta.svg" alt="alerta">
+                <p>Solo letras minúsculas y sin acentos</p>
             </div>
-
-            <!-- CONTENEDOR DE BOTONES -->
-            <div class="contenedor-botones">
-                <!-- BOTÓN PARA ENCRIPTAR EL TEXTO -->
-                <input type="button" class="button-encriptar" value="Encriptar"> <!-- Botón que activa la función de encriptar -->
-                <!-- BOTÓN PARA DESENCRIPTAR EL TEXTO -->
-                <input type="button" class="button-desencriptar" value="Desencriptar"> <!-- Botón que activa la función de desencriptar -->
+            <div class="button-container">
+                <input type="button" class="encrypt-button" value="Encriptar">
+                <input type="button" class="decrypt-button" value="Desencriptar">
             </div>
         </section>
-
-        <!-- SECCIÓN 2: ÁREA PARA MOSTRAR RESULTADOS Y ELEMENTOS VISUALES -->
-        <section class="section2">
-            <!-- IMAGEN ANIMADA DEL PERSONAJE -->
-            <div class="personaje_animado">
-                <img src="/img/personaje_animado.svg" alt="personaje_animado"> <!-- Imagen animada del personaje que acompaña el contenido -->
+        <section class="result-section">
+            <div class="image-container">
+                <img src="Imagenes/Muñeco.svg" alt="muñeco">
             </div>
-                
-            <!-- MENSAJE CUANDO NO SE ENCUENTRA NINGÚN MENSAJE ENCRIPTADO -->
-            <div class="contenedor_texto1">
-                <h2>Ningún mensaje fue <br> encontrado </h2> <!-- Título que aparece cuando no hay mensaje encriptado -->
-                <p>Ingresa el texto que desees encriptar <br> o desencriptar </p> <!-- Instrucciones para el usuario -->
+            <div class="text-container">
+                <h3>Ningún mensaje fue <br> encontrado</h3>
+                <p>Ingresa el texto que desees encriptar o <br> desencriptar.</p>
             </div>
-
-            <!-- BOTÓN COPIAR: PERMITE COPIAR EL TEXTO ENCRIPTADO O DESENCRIPTADO -->
-            <div class="button_copiar">
-                <input type="button" class="btn_copiar" value="copiar"> <!-- Botón que permite copiar el resultado al portapapeles -->
+            <div class="copy-container">
+                <input type="button" class="copy-button" value="Copiar">
             </div>
-
-            <!-- CONTENEDOR DEL RESULTADO DEL PROCESO DE ENCRIPTACIÓN O DESENCRIPTACIÓN -->
-            <div class="contenedor_resultado">
-                <!-- PARÁGRAFO DONDE SE MOSTRARÁ EL TEXTO RESULTANTE -->
-                <p class="texto-resultado"></p> <!-- Área donde se mostrará el texto encriptado o desencriptado -->
+            <div class="result-display">
+                <p class="result-text"></p>
             </div>
         </section>
     </main>
-
-    <!-- PIE DE PÁGINA -->
-    <footer>Creado por Enrique Padilla</footer> <!-- Información del creador de la página -->
+    <script src="script.js"></script>
 </body>
 </html>
